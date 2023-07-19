@@ -28,12 +28,12 @@ class _MyHomePageState extends State<MyHomePage> {
 
   void onTextChanged(String value) {
     // 处理搜索文本变化的逻辑
-    print('Search text changed: $value');
+    // print('Search text changed: $value');
   }
 
   void onSubmitted(String value) {
     // 处理提交搜索的逻辑
-    print('Search submitted: $value');
+    // print('Search submitted: $value');
   }
 
   @override
@@ -48,16 +48,16 @@ class _MyHomePageState extends State<MyHomePage> {
             controller: _textEditingController,
             onChanged: onTextChanged,
             decoration: InputDecoration(
-              label: Text('Search'),
+              label: const Text('Search'),
               hintText: 'Enter a keyword',
               prefixIcon: IconButton(
-                icon: Icon(Icons.search),
+                icon: const Icon(Icons.search),
                 onPressed: () {
                   onSubmitted(_textEditingController.text);
                 },
               ),
               suffixIcon: IconButton(
-                icon: Icon(Icons.clear),
+                icon: const Icon(Icons.clear),
                 onPressed: () {
                   _textEditingController.clear();
                 },
@@ -68,7 +68,7 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body:  AlphabetListScrollView(
         onClickedItem: (item) {
-          print(item);
+          // print(item);
           Navigator.push(
               context,
               MaterialPageRoute( builder: (context) =>  GuideDetailsPage(title: item,))

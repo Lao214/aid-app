@@ -48,7 +48,7 @@ class _AlphabetListScrollViewState extends State<AlphabetListScrollView> {
 
   @override
   Widget build(BuildContext context) => AzListView(
-    padding: EdgeInsets.all(7.0),
+    padding: const EdgeInsets.all(7.0),
     data: items,
     itemCount: items.length,
     itemBuilder: (context, index) {
@@ -60,7 +60,7 @@ class _AlphabetListScrollViewState extends State<AlphabetListScrollView> {
       alignment: Alignment.center,
       width: 60,
       height: 60,
-      decoration: BoxDecoration(color: Colors.teal,shape: BoxShape.circle),
+      decoration: const BoxDecoration(color: Colors.teal,shape: BoxShape.circle),
       child: Text(
         hint,
         style: const TextStyle(color: Colors.white,fontSize: 24.0),
@@ -83,7 +83,7 @@ class _AlphabetListScrollViewState extends State<AlphabetListScrollView> {
   Widget _buildListItem(CountryList item) => ListTile(
     title:
       Container(
-        margin: EdgeInsets.only(right: 16.0),
+        margin: const EdgeInsets.only(right: 16.0),
         child: ListTile(
           title: Text(item.title),
           onTap: () {

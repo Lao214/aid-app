@@ -18,9 +18,9 @@ class _BottomNavigationWidgetState extends State<BottomNavigationWidget> {
 
   @override
   void initState() {
-    lists..add(MyHomePage())
-      ..add(HelpPage())
-      ..add(AboutPage());
+    lists..add(const MyHomePage())
+      ..add(const HelpPage())
+      ..add(const AboutPage());
     super.initState();
   }
 
