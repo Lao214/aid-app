@@ -82,36 +82,23 @@ class _AlphabetListScrollViewState extends State<AlphabetListScrollView> {
 
   Widget _buildListItem(CountryList item) => ListTile(
     title:
-      Container(
-        margin: const EdgeInsets.only(right: 16.0),
-        child: ListTile(
-          title: Text(item.title),
-          onTap: () {
-            widget.onClickedItem(item.title);
-            // print('object');
-          },
-        ),
+      Column(
+        children:[
+          ListTile(
+            title: Text(item.title),
+            onTap: () {
+              widget.onClickedItem(item.title);
+              // print('object');
+            },
+          ),
+           const Divider(
+            color:  Color.fromRGBO(232, 232, 232, 1.0),
+            height: 1,
+            thickness: 1,
+          ),
+        ]
       )
   );
 
-  // Widget _buildListItem(_AZItem item) {
-  //   final tag = item.getSuspensionTag();
-  //   final offstage = !item.isShowSuspension;
-  //
-  //   return Column(
-  //     children: <Widget>[
-  //       Offstage(offstage: offstage,child: buildHeader(tag),),
-  //       Container(
-  //         margin: EdgeInsets.only(right: 16.0),
-  //         child: ListTile(
-  //           title: Text(item.title),
-  //           onTap: () {
-  //             widget.onClickedItem(item.title);
-  //           },
-  //         ),
-  //       )
-  //     ],
-  //   );
-  // }
 
 }
